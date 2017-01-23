@@ -14,13 +14,17 @@ function getFileLists(path) {
 //http://localhost:8383/haFamily/img/cS-1.jpg
 function getFileLists1() {
     $.ajax({
-        url: "http://localhost:8383/haFamily/img/",
+//        url: "http://localhost:8383/haFamily/img/",
+        url: "img/",
         success: function (data) {
             console.log(data);
             $(data).find("td > a").each(function () {
                 // will loop through 
                 alert("Found a file: " + $(this).attr("href"));
             });
+        },
+        fail: function(){
+            console.log("fail");
         }
     });
 }

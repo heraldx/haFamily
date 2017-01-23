@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 $(document).ready(function () {
+    
     $("#content-slider").lightSlider({
         loop: true,
         keyPress: true
@@ -19,5 +20,15 @@ $(document).ready(function () {
         onSliderLoad: function () {
             $('#image-gallery').removeClass('cS-hidden');
         }
-    });
+    });   
 });
+
+function getFileLists(){
+    var fileExt = "jpg";
+    $.get('img/', function(data){
+        $(data).find("a:contains(" + fileExt + ")").each(function(){
+            $('#image-gallery').after('<li data-thumb=img/thumb/' 
+                + $(this).text() + '><img src=img/' + $(this).text() + ' /></li>');
+        });
+    });
+}

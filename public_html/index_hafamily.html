@@ -19,6 +19,9 @@ and open the template in the editor.
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/hafamily.css" rel="stylesheet">
         <!--<link href="css/grid.css" rel="stylesheet">-->
+        <!--Lightbox-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.1.1/ekko-lightbox.css" />
+
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -181,6 +184,46 @@ and open the template in the editor.
             </div>
         </div>
 
-        
+        <!--lightbox example-->
+        <div class="row">
+            <div class="col-xs-4 col-sm-3" >
+                <a href="https://unsplash.it/1200/768.jpg?image=250" data-toggle="lightbox" class="thumbnail" data-title="A random title" data-footer="A custom footer text">
+                    <img src="https://unsplash.it/600.jpg?image=250" class="img-fluid">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-md-2 col-md-3">
+                <div class="row">
+                    <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4 thumbnail">
+                        <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
+                    </a>
+                    <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4 thumbnail">
+                        <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid">
+                    </a>
+                    <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4 thumbnail">
+                        <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid">
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4 thumbnail">
+                        <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">
+                    </a>
+                    <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4 thumbnail">
+                        <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
+                    </a>
+                    <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4 thumbnail">
+                        <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.1.1/ekko-lightbox.js"></script>
+        <script>
+            $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+        </script>
     </body>
 </html>
